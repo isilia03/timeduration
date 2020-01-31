@@ -1,10 +1,17 @@
 
-public class TimeDuration {
+public class TimeDuration{
 	private int s = 0;
 	
-	public TimeDuration(int second)
+	public TimeDuration(int second) throws BadBadValueException
 	{
-		s = second;
+		  
+		    if(s < 0)
+		      throw new BadBadValueException();
+		    else
+		    {
+		      s = second;
+		    }
+		  
 	}
 	
 	public String toString() {
